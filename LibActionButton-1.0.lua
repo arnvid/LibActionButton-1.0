@@ -1367,8 +1367,8 @@ function OnEvent(frame, event, arg1, ...)
 			UpdateFlyoutSpells()
 		end
 	-- FIXBETA
-	--	elseif (event == "UNIT_INVENTORY_CHANGED" and arg1 == "player") or event == "LEARNED_SPELL_IN_TAB" then
-	elseif (event == "UNIT_INVENTORY_CHANGED" and arg1 == "player") then
+	elseif (event == "UNIT_INVENTORY_CHANGED" and arg1 == "player") or event == "LEARNED_SPELL_IN_TAB" or event == "LEARNED_SPELL_IN_SKILL_LINE" then
+	-- elseif (event == "UNIT_INVENTORY_CHANGED" and arg1 == "player") then
 		local tooltipOwner = GameTooltip_GetOwnerForbidden()
 		if tooltipOwner and ButtonRegistry[tooltipOwner] then
 			tooltipOwner:SetTooltip()
